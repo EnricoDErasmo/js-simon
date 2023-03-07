@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Assets */
+
+.back-container{
+    position: relative;
+
+    height: 100vh;
+
+    background-image: url(../Img/back.jpg);
+    background-size: cover;
+}
+
+#random-num-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+
+    margin: 0px auto;
+
+    padding-top: 20px;
+
+    width: 70%;
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding-top: 45px;
+
+    border-radius: 8px;
+
+    width: 180px;
+    height: 250px;
+
+    background-image: url(../Img/card-back.png);
+    background-size: cover;
+
+    font-family: 'Mystery Quest', cursive;
+    font-size: 5em;
+
+    box-shadow: 10px 10px 30px black; 
+}
+
+.back-card{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding-top: 45px;
+
+    border-radius: 8px;
+
+    width: 180px;
+    height: 250px;
+
+    background-image: url(../Img/back-card.png);
+    background-size: cover;
+
+    box-shadow: 10px 10px 30px black; 
+}
+
+#start-btn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    padding: 16px 60px;
+
+    border-radius: 40px;
+    border-style: none;
+
+    color: white;
+
+    font-family: 'Anton', sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+
+    background-color: #272455;
+
+    cursor: pointer;
+}
+

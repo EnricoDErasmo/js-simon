@@ -12,3 +12,54 @@ sono stati individuati.
 Bonus:
 Gestire l'inserimento dei numeri tramite 5 input diversi.
 */
+
+const randomContainerEl = document.getElementById("random-num-container");
+const startBtn = document.getElementById("start-btn");
+
+
+
+startBtn.addEventListener("click", function() {
+    
+    startBtn.style.display = "none";
+    
+    createCards(5);
+    
+    
+    const countdown = setInterval(count, 10000);
+
+    function count(){
+
+        newCard.innerHTML ="";
+    
+        newCard.className = "back-card";
+  
+    };
+
+    clearInterval(countdown);
+});
+
+
+
+
+
+// ---------------------------------------------------------------------
+// Functions
+// ---------------------------------------------------------------------
+
+function createCards (cardNum){
+
+    for(i = 1; i <= cardNum; i++){
+
+        let newCard = document.createElement("div");
+
+        newCard.innerHTML = Math.floor(Math.random() * 20) + 1;
+
+        newCard.className = "card";
+
+        randomContainerEl.append(newCard);
+    };
+};
+
+
+
+
