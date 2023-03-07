@@ -20,22 +20,30 @@ const startBtn = document.getElementById("start-btn");
 
 startBtn.addEventListener("click", function() {
     
+    const randomNum = [];
+    
     startBtn.style.display = "none";
-    
-    createCards(5);
-    
-    
-    const countdown = setInterval(count, 10000);
+
+    for(i = 1; i <= 5; i++){
+
+       createCards (randomNum[i]);
+       
+    };    
+        
+    createRandomNum (randomNum, 5);
+
+
+    console.log(randomNum);
+
+
+    setTimeout(count, 10000);
 
     function count(){
-
-        newCard.innerHTML ="";
     
-        newCard.className = "back-card";
-  
+    randomContainerEl.style.display = "none";
+    
     };
-
-    clearInterval(countdown);
+    
 });
 
 
@@ -46,19 +54,33 @@ startBtn.addEventListener("click", function() {
 // Functions
 // ---------------------------------------------------------------------
 
-function createCards (cardNum){
-
-    for(i = 1; i <= cardNum; i++){
+function createCards (arrayNum){
 
         let newCard = document.createElement("div");
 
-        newCard.innerHTML = Math.floor(Math.random() * 20) + 1;
-
         newCard.className = "card";
 
+        newCard.innerHTML = arrayNum;
+
         randomContainerEl.append(newCard);
+
+        return newCard;
+};
+
+function createRandomNum (array, cardsNum) {
+
+    while (array.length < cardsNum){
+   
+        let newNumber = Math.floor(Math.random() * 20) + 1;
+    
+        if (!array.includes(newNumber)) {
+    
+            array.push(newNumber);
+        };
     };
 };
+
+
 
 
 

@@ -19,7 +19,6 @@
     flex-direction: row;
     justify-content: space-between;
     
-
     margin: 0px auto;
 
     padding-top: 20px;
@@ -49,11 +48,6 @@
 }
 
 .back-card{
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-
-    padding-top: 45px;
 
     border-radius: 8px;
 
