@@ -22,20 +22,18 @@ startBtn.addEventListener("click", function() {
     
     const randomNum = [];
     
+    createRandomNum (randomNum, 5);
+
+    console.log(randomNum);
+    
     startBtn.style.display = "none";
 
-    for(i = 1; i <= 5; i++){
+    for(i = 0; i < 5; i++){
 
        createCards (randomNum[i]);
        
     };    
         
-    createRandomNum (randomNum, 5);
-
-
-    console.log(randomNum);
-
-
     setTimeout(count, 10000);
 
     function count(){
